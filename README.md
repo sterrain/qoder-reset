@@ -9,7 +9,7 @@ A powerful and compact shell script to completely reset and clean all Qoder appl
 - **Safe Confirmation**: Requires user confirmation before proceeding
 - **Hardware Fingerprint Reset**: Generates fake hardware information to bypass detection
 - **Chat History Management**: Option to preserve or clean chat history
-- **No GUI Required**: Pure bash script with no external dependencies
+- **Pure Bash Script**: No external dependencies required
 
 ## 🛠️ Installation
 
@@ -146,16 +146,7 @@ pkill -f Qoder
 - **Error Handling**: Exits on critical errors
 - **Root Warning**: Warns against running as root
 
-## 📊 Comparison with GUI Version
 
-| Feature | GUI Version | Terminal Version |
-|---------|-------------|------------------|
-| **Dependencies** | PyQt5, Python3 | Bash only |
-| **Installation** | Requires pip install | No installation |
-| **Size** | ~100KB + dependencies | ~15KB standalone |
-| **Speed** | Slower startup | Instant execution |
-| **Portability** | Platform specific | Universal |
-| **Functionality** | Full feature set | Full feature set |
 
 ## 🤝 Contributing
 

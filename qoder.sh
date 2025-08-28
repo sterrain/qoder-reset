@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Qoder-Free Terminal Reset Tool
+# Qoder Reset Tool
 # A comprehensive terminal-only script to reset Qoder application identity information
-# No GUI dependencies, pure bash script
+# Pure bash script with no external dependencies
 
 set -e  # Exit on any error
 
@@ -57,7 +57,7 @@ print_banner() {
     echo "╔══════════════════════════════════════════════════════════════╗"
     echo "║                    Qoder Reset Tool                         ║"
     echo "║              Complete Identity Reset Solution               ║"
-    echo "║                    No GUI Required                          ║"
+    echo "║                    Pure Bash Script                        ║"
     echo "╚══════════════════════════════════════════════════════════════╝"
     echo -e "${NC}"
     echo
