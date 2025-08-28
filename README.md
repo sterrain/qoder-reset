@@ -1,0 +1,182 @@
+# Qoder Reset Tool
+
+A powerful and compact shell script to completely reset and clean all Qoder application identity information from your system. Get Qoder from [https://qoder.com](https://qoder.com)
+
+## 🚀 Features
+
+- **Complete Identity Reset**: Removes all Qoder machine IDs, telemetry data, hardware fingerprints, and network traces
+- **Cross-Platform Support**: Works on Windows, macOS, and Linux
+- **Safe Confirmation**: Requires user confirmation before proceeding
+- **Hardware Fingerprint Reset**: Generates fake hardware information to bypass detection
+- **Chat History Management**: Option to preserve or clean chat history
+- **No GUI Required**: Pure bash script with no external dependencies
+
+## 🛠️ Installation
+
+### Option 1: Clone Repository
+```bash
+git clone https://github.com/bunnysayzz/qoder-reset.git
+cd qoder-reset
+chmod +x qoder.sh
+./qoder.sh
+```
+
+### Option 2: Direct Download (Copy-Paste)
+
+#### For macOS/Linux:
+```bash
+curl -o qoder.sh https://raw.githubusercontent.com/bunnysayzz/qoder-reset/main/qoder.sh && chmod +x qoder.sh
+./qoder.sh
+```
+
+#### For Windows (Git Bash/WSL):
+```bash
+curl -o qoder.sh https://raw.githubusercontent.com/bunnysayzz/qoder-reset/main/qoder.sh && chmod +x qoder.sh
+./qoder.sh
+```
+
+#### For Windows (PowerShell):
+```powershell
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/bunnysayzz/qoder-reset/main/qoder.sh" -OutFile "qoder.sh"
+bash qoder.sh
+```
+
+### Option 3: Manual Copy-Paste
+1. Visit: https://raw.githubusercontent.com/bunnysayzz/qoder-reset/main/qoder.sh
+2. Copy the entire content
+3. Create a new file: `qoder.sh`
+4. Paste the content and save
+5. Make executable: `chmod +x qoder.sh`
+
+## 🎯 Usage
+
+```bash
+./qoder.sh
+```
+
+The script will:
+1. Display a beautiful ASCII art banner
+2. Check if Qoder is running and ask you to close it
+3. Show available reset operations
+4. Ask about preserving chat history
+5. Perform the selected reset process
+
+## 🔧 What Gets Reset
+
+The tool resets the following Qoder identity information:
+
+- **Machine ID**: Generates new machine identifiers and UUIDs
+- **Telemetry Data**: Resets all tracking and analytics data
+- **Hardware Fingerprints**: Creates fake hardware information
+- **Cache Directories**: Removes all cache and temporary files
+- **Identity Files**: Cleans network traces and identity data
+- **SharedClientCache**: Resets language server connections
+- **Network State**: Clears persistent network connections
+
+## ⚠️ Important Notes
+
+- **Close Qoder First**: Ensure Qoder is completely closed before running
+- **Fresh Identity**: Qoder will recognize your device as new after reset
+- **Get Qoder**: Download and install Qoder from [https://qoder.com](https://qoder.com)
+- **Chat History**: Choose whether to preserve or clean chat data
+- **System Restart**: Recommended after completion for best results
+
+## 🖥️ Supported Operating Systems
+
+- **Windows**: Windows 10/11 (Git Bash, WSL, or PowerShell)
+- **macOS**: macOS 10.14+
+- **Linux**: Most distributions with bash
+
+## 📁 File Locations Cleaned
+
+- Qoder application support directory
+- Machine ID and device identifier files
+- Telemetry and tracking data
+- Cache and temporary directories
+- Hardware fingerprint files
+- Network state and connection data
+- Shared client cache directories
+
+## 🔍 Troubleshooting
+
+### Common Issues
+
+**Permission Denied**
+```bash
+chmod +x qoder.sh
+```
+
+**Script Won't Run**
+```bash
+ls -la qoder.sh
+bash qoder.sh
+```
+
+**Qoder Still Running**
+```bash
+# macOS
+pkill -f Qoder
+
+# Windows
+taskkill /f /im Qoder.exe
+
+# Linux
+pkill -f Qoder
+```
+
+**Directory Not Found**
+- Ensure Qoder is installed
+- Run Qoder at least once to create configuration
+
+## 🎮 Available Operations
+
+1. **Complete Reset** - Performs all reset operations (recommended)
+2. **Reset Machine ID** - Only resets machine identifiers
+3. **Reset Telemetry** - Only resets telemetry data
+4. **Clean Cache** - Only cleans cache directories
+5. **Clean Identity Files** - Only cleans identity files
+6. **Reset Hardware Fingerprints** - Only resets hardware info
+7. **Exit** - Quit the script
+
+## 🛡️ Safety Features
+
+- **Process Detection**: Won't run if Qoder is active
+- **Directory Validation**: Ensures Qoder directory exists
+- **User Confirmation**: Asks before destructive operations
+- **Error Handling**: Exits on critical errors
+- **Root Warning**: Warns against running as root
+
+## 📊 Comparison with GUI Version
+
+| Feature | GUI Version | Terminal Version |
+|---------|-------------|------------------|
+| **Dependencies** | PyQt5, Python3 | Bash only |
+| **Installation** | Requires pip install | No installation |
+| **Size** | ~100KB + dependencies | ~15KB standalone |
+| **Speed** | Slower startup | Instant execution |
+| **Portability** | Platform specific | Universal |
+| **Functionality** | Full feature set | Full feature set |
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 👨‍💻 Author
+
+**bunnysayzz**
+
+- GitHub: [@bunnysayzz](https://github.com/bunnysayzz)
+
+## ⭐ Show your support
+
+Give a ⭐️ if this project helped you!
+
+---
+
+**Disclaimer**: Use this tool at your own risk. Always backup important data before running system cleanup tools. This tool is for educational purposes only.
