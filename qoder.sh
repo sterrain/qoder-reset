@@ -95,29 +95,51 @@ check_qoder_running() {
     log "HEADER" "Checking Qoder process status..."
     
     local qoder_pids=()
+    local system=$(uname -s)
     
-    # Check for Qoder processes
-    if command -v pgrep >/dev/null 2>&1; then
-        qoder_pids=($(pgrep -f "Qoder" 2>/dev/null || true))
+    # Check for Qoder processes based on platform
+    if [[ "$system" == MINGW* ]] || [[ "$system" == MSYS* ]] || [[ "$system" == CYGWIN* ]] || [[ "$system" == Windows* ]]; then
+        # Windows: Use tasklist if available, otherwise ps
+        if command -v tasklist >/dev/null 2>&1; then
+            qoder_pids=($(tasklist /FI "IMAGENAME eq Qoder.exe" 2>/dev/null | grep -i "Qoder.exe" | awk '{print $2}' 2>/dev/null || true))
+        else
+            qoder_pids=($(ps aux | grep -i "Qoder" | grep -v grep | awk '{print $2}' 2>/dev/null || true))
+        fi
     else
-        # Fallback for systems without pgrep
-        qoder_pids=($(ps aux | grep -i "Qoder" | grep -v grep | awk '{print $2}' 2>/dev/null || true))
+        # macOS/Linux: Use pgrep or ps
+        if command -v pgrep >/dev/null 2>&1; then
+            qoder_pids=($(pgrep -f "Qoder" 2>/dev/null || true))
+        else
+            qoder_pids=($(ps aux | grep -i "Qoder" | grep -v grep | awk '{print $2}' 2>/dev/null || true))
+        fi
     fi
     
     if [ ${#qoder_pids[@]} -gt 0 ]; then
         log "ERROR" "Qoder is currently running (PIDs: ${qoder_pids[*]})"
         log "WARNING" "Please close Qoder completely before proceeding"
-        log "WARNING" "On macOS: Cmd+Q or Quit from menu"
-        log "WARNING" "On Windows: Close from taskbar or Task Manager"
-        log "WARNING" "On Linux: Close from application menu"
+        if [[ "$system" == MINGW* ]] || [[ "$system" == MSYS* ]] || [[ "$system" == CYGWIN* ]] || [[ "$system" == Windows* ]]; then
+            log "WARNING" "On Windows: Close from taskbar or Task Manager"
+        elif [[ "$system" == "Darwin" ]]; then
+            log "WARNING" "On macOS: Cmd+Q or Quit from menu"
+        else
+            log "WARNING" "On Linux: Close from application menu"
+        fi
         echo
         read -p "Press Enter after closing Qoder, or Ctrl+C to cancel: "
         
         # Check again
-        if command -v pgrep >/dev/null 2>&1; then
-            qoder_pids=($(pgrep -f "Qoder" 2>/dev/null || true))
+        if [[ "$system" == MINGW* ]] || [[ "$system" == MSYS* ]] || [[ "$system" == CYGWIN* ]] || [[ "$system" == Windows* ]]; then
+            if command -v tasklist >/dev/null 2>&1; then
+                qoder_pids=($(tasklist /FI "IMAGENAME eq Qoder.exe" 2>/dev/null | grep -i "Qoder.exe" | awk '{print $2}' 2>/dev/null || true))
+            else
+                qoder_pids=($(ps aux | grep -i "Qoder" | grep -v grep | awk '{print $2}' 2>/dev/null || true))
+            fi
         else
-            qoder_pids=($(ps aux | grep -i "Qoder" | grep -v grep | awk '{print $2}' 2>/dev/null || true))
+            if command -v pgrep >/dev/null 2>&1; then
+                qoder_pids=($(pgrep -f "Qoder" 2>/dev/null || true))
+            else
+                qoder_pids=($(ps aux | grep -i "Qoder" | grep -v grep | awk '{print $2}' 2>/dev/null || true))
+            fi
         fi
         
         if [ ${#qoder_pids[@]} -gt 0 ]; then
@@ -142,7 +164,24 @@ get_qoder_data_dir() {
             qoder_dir="$HOME/.config/Qoder"
             ;;
         "MINGW"*|"MSYS"*|"CYGWIN"*|"Windows"*)
-            qoder_dir="$APPDATA/Qoder"
+            # Windows: Check multiple possible locations
+            if [ -n "$APPDATA" ] && [ -d "$APPDATA/Qoder" ]; then
+                qoder_dir="$APPDATA/Qoder"
+                log "INFO" "Found Qoder in APPDATA: $qoder_dir"
+            elif [ -n "$LOCALAPPDATA" ] && [ -d "$LOCALAPPDATA/Qoder" ]; then
+                qoder_dir="$LOCALAPPDATA/Qoder"
+                log "INFO" "Found Qoder in LOCALAPPDATA: $qoder_dir"
+            elif [ -n "$USERPROFILE" ] && [ -d "$USERPROFILE/AppData/Roaming/Qoder" ]; then
+                qoder_dir="$USERPROFILE/AppData/Roaming/Qoder"
+                log "INFO" "Found Qoder in USERPROFILE/Roaming: $qoder_dir"
+            elif [ -n "$USERPROFILE" ] && [ -d "$USERPROFILE/AppData/Local/Qoder" ]; then
+                qoder_dir="$USERPROFILE/AppData/Local/Qoder"
+                log "INFO" "Found Qoder in USERPROFILE/Local: $qoder_dir"
+            else
+                log "ERROR" "Qoder directory not found in any Windows location"
+                log "ERROR" "Searched: APPDATA, LOCALAPPDATA, USERPROFILE/AppData/Roaming, USERPROFILE/AppData/Local"
+                exit 1
+            fi
             ;;
         *)
             log "ERROR" "Unsupported operating system: $system"
@@ -191,15 +230,20 @@ check_qoder_directory() {
 
 # Generate UUID
 generate_uuid() {
+    local system=$(uname -s)
+    
     if command -v uuidgen >/dev/null 2>&1; then
         uuidgen
     elif command -v python3 >/dev/null 2>&1; then
         python3 -c "import uuid; print(str(uuid.uuid4()))"
     elif command -v python >/dev/null 2>&1; then
         python -c "import uuid; print(str(uuid.uuid4()))"
+    elif [[ "$system" == MINGW* ]] || [[ "$system" == MSYS* ]] || [[ "$system" == CYGWIN* ]] || [[ "$system" == Windows* ]]; then
+        # Windows fallback: generate a simple random string
+        echo "$RANDOM-$RANDOM-$RANDOM-$RANDOM"
     else
-        # Fallback: generate a simple random string
-        cat /dev/urandom | tr -dc 'a-f0-9' | fold -w 32 | head -n 1 | sed 's/./&-/g' | sed 's/-$//'
+        # Unix fallback: generate a simple random string
+        cat /dev/urandom 2>/dev/null | tr -dc 'a-f0-9' | fold -w 32 | head -n 1 | sed 's/./&-/g' | sed 's/-$//' 2>/dev/null || echo "$RANDOM-$RANDOM-$RANDOM-$RANDOM"
     fi
 }
 

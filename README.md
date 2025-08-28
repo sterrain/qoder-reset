@@ -43,7 +43,21 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/bunnysayzz/qoder-reset
 bash qoder.sh
 ```
 
-### Option 3: Manual Copy-Paste
+### Option 3: Windows Native Scripts (Easiest)
+
+#### Windows Batch File (Double-click to run):
+```cmd
+# Just download and double-click
+qoder_reset_windows.bat
+```
+
+#### Windows PowerShell:
+```powershell
+# Run in PowerShell
+.\qoder_reset_windows.ps1
+```
+
+### Option 4: Manual Copy-Paste
 1. Visit: https://raw.githubusercontent.com/bunnysayzz/qoder-reset/main/qoder.sh
 2. Copy the entire content
 3. Create a new file: `qoder.sh`
@@ -85,7 +99,7 @@ The tool resets the following Qoder identity information:
 
 ## 🖥️ Supported Operating Systems
 
-- **Windows**: Windows 10/11 (Git Bash, WSL, or PowerShell)
+- **Windows**: Windows 10/11 (Git Bash, WSL, PowerShell, or native batch file)
 - **macOS**: macOS 10.14+
 - **Linux**: Most distributions with bash
 
@@ -147,8 +161,6 @@ pkill -f Qoder
 - **User Confirmation**: Asks before destructive operations
 - **Error Handling**: Exits on critical errors
 - **Root Warning**: Warns against running as root
-
-
 
 ## 🤝 Contributing
 
