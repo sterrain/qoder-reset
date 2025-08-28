@@ -1,3 +1,5 @@
+**For Augment reset tool, click here: [https://github.com/bunnysayzz/augment-reset.git](https://github.com/bunnysayzz/augment-reset.git)**
+
 # Qoder Reset Tool
 
 A powerful and compact shell script to completely reset and clean all Qoder application identity information from your system. Get Qoder from [https://qoder.com](https://qoder.com)
