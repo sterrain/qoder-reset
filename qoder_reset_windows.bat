@@ -1,6 +1,8 @@
 @echo off
 REM Qoder Reset Tool - Windows Batch Version
 REM Fixed Windows path handling for Qoder data directory
+REM Repository: https://github.com/bunnysayzz/qoder-reset.git
+REM Author: @bunnysayzz
 
 setlocal enabledelayedexpansion
 
@@ -139,5 +141,12 @@ echo - Backup created: %QODER_DIR%.backup
 echo.
 echo You can now restart Qoder and it will recognize
 echo your device as new.
+echo.
+echo ==================================================
+echo           Qoder Reset Tool - Windows
+echo ==================================================
+echo Repository: https://github.com/bunnysayzz/qoder-reset.git
+echo Author: @bunnysayzz
+echo ⭐ Give a star if this project helped you!
 echo.
 pause 

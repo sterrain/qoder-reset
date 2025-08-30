@@ -1,5 +1,7 @@
 # Qoder Reset Tool - Windows PowerShell Version
 # Fixed Windows path handling for Qoder data directory
+# Repository: https://github.com/bunnysayzz/qoder-reset.git
+# Author: @bunnysayzz
 
 param(
     [switch]$Force,
@@ -220,6 +222,14 @@ if (-not $NoBackup) {
 Write-Host ""
 Write-Host "You can now restart Qoder and it will recognize" -ForegroundColor Yellow
 Write-Host "your device as new." -ForegroundColor Yellow
+Write-Host ""
+
+Write-Host "==================================================" -ForegroundColor Cyan
+Write-Host "           Qoder Reset Tool - Windows" -ForegroundColor Cyan
+Write-Host "==================================================" -ForegroundColor Cyan
+Write-Host "Repository: https://github.com/bunnysayzz/qoder-reset.git" -ForegroundColor Cyan
+Write-Host "Author: @bunnysayzz" -ForegroundColor Cyan
+Write-Host "⭐ Give a star if this project helped you!" -ForegroundColor Yellow
 Write-Host ""
 
 Read-Host "Press Enter to exit" 
