@@ -8,9 +8,9 @@
 > 
 > **Why?** Duplicate registrations may still be recognized due to browser cache or fingerprinting, even after resetting Qoder's device identity.
 > 
-> **Solution:** Use a fingerprint browser like [FingerprintJS](https://sourceforge.net/projects/fingerprintjs.mirror/) to create completely new browser profiles with unique fingerprints.
+> **Solution:** Use a privacy-focused fingerprint browser like [Mullvad Browser](https://www.privacyguides.org/en/desktop-browsers/#mullvad-browser) to create completely new browser profiles with unique fingerprints.
 > 
-> **Download:** [FingerprintJS Mirror on SourceForge](https://sourceforge.net/projects/fingerprintjs.mirror/)
+> **Download:** [Privacy Guides - Desktop Browsers](https://www.privacyguides.org/en/desktop-browsers/)
 
 ---
 
@@ -93,11 +93,14 @@ The script will:
 
 **⚠️ IMPORTANT:** After running the reset script, you MUST:
 
-1. **Download Fingerprint Browser**: [FingerprintJS Mirror on SourceForge](https://sourceforge.net/projects/fingerprintjs.mirror/)
-2. **Set as Default Browser**: Make it your primary browser
-3. **Use for Qoder Signup**: Only use the fingerprint browser for new Qoder registration
+1. **Download Fingerprint Browser**: [Privacy Guides - Desktop Browsers](https://www.privacyguides.org/en/desktop-browsers/)
+2. **Recommended Options**: Mullvad Browser, Firefox+Arkenfox, Brave
+3. **Set as Default Browser**: Make it your primary browser
+4. **Use for Qoder Signup**: Only use the fingerprint browser for new Qoder registration
 
-**Why?** Even after resetting Qoder's device identity, your regular browser can still be fingerprinted and detected. Using a fingerprint browser ensures complete anonymity.
+**Why?** Even after resetting Qoder's device identity, your regular browser can still be fingerprinted and detected. Using a privacy-focused fingerprint browser ensures complete anonymity.
+
+**Best Choice:** [Mullvad Browser](https://www.privacyguides.org/en/desktop-browsers/#mullvad-browser) provides the strongest anti-fingerprinting protection out of the box.
 
 ## 🔧 What Gets Reset
 

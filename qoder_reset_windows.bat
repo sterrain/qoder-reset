@@ -146,7 +146,8 @@ echo ==================================================
 echo           🔥 IMPORTANT NEXT STEP 🔥
 echo ==================================================
 echo ⚠️  Download fingerprint browser and set as default!
-echo 📥 Download: https://sourceforge.net/projects/fingerprintjs.mirror/
+echo 📥 Best Options: Mullvad Browser, Firefox+Arkenfox, Brave
+echo 🔗 Download: https://www.privacyguides.org/en/desktop-browsers/
 echo 🔧 Use fingerprint browser for new Qoder signup to avoid detection!
 echo.
 echo ==================================================

@@ -777,7 +777,8 @@ main() {
     echo -e "${RED}║                    🔥 IMPORTANT NEXT STEP 🔥                ║${NC}"
     echo -e "${RED}╚══════════════════════════════════════════════════════════════╝${NC}"
     echo -e "${YELLOW}⚠️  Download fingerprint browser and set as default!${NC}"
-    echo -e "${CYAN}📥 Download: https://sourceforge.net/projects/fingerprintjs.mirror/${NC}"
+    echo -e "${CYAN}📥 Best Options: Mullvad Browser, Firefox+Arkenfox, Brave${NC}"
+    echo -e "${CYAN}🔗 Download: https://www.privacyguides.org/en/desktop-browsers/${NC}"
     echo -e "${YELLOW}🔧 Use fingerprint browser for new Qoder signup to avoid detection!${NC}"
     echo
     log "SUCCESS" "Operation completed successfully!"

@@ -228,7 +228,8 @@ Write-Host "==================================================" -ForegroundColor
 Write-Host "           🔥 IMPORTANT NEXT STEP 🔥" -ForegroundColor Red
 Write-Host "==================================================" -ForegroundColor Red
 Write-Host "⚠️  Download fingerprint browser and set as default!" -ForegroundColor Yellow
-Write-Host "📥 Download: https://sourceforge.net/projects/fingerprintjs.mirror/" -ForegroundColor Cyan
+Write-Host "📥 Best Options: Mullvad Browser, Firefox+Arkenfox, Brave" -ForegroundColor Cyan
+Write-Host "🔗 Download: https://www.privacyguides.org/en/desktop-browsers/" -ForegroundColor Cyan
 Write-Host "🔧 Use fingerprint browser for new Qoder signup to avoid detection!" -ForegroundColor Yellow
 Write-Host ""
 
