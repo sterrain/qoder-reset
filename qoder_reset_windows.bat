@@ -143,6 +143,13 @@ echo You can now restart Qoder and it will recognize
 echo your device as new.
 echo.
 echo ==================================================
+echo           🔥 IMPORTANT NEXT STEP 🔥
+echo ==================================================
+echo ⚠️  Download fingerprint browser and set as default!
+echo 📥 Download: https://sourceforge.net/projects/fingerprintjs.mirror/
+echo 🔧 Use fingerprint browser for new Qoder signup to avoid detection!
+echo.
+echo ==================================================
 echo           Qoder Reset Tool - Windows
 echo ==================================================
 echo Repository: https://github.com/bunnysayzz/qoder-reset.git

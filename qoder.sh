@@ -773,6 +773,13 @@ main() {
     echo -e "${GREEN}Operation completed successfully!${NC}"
     echo -e "${GREEN}You can now restart Qoder and it will recognize your device as new.${NC}"
     echo
+    echo -e "${RED}╔══════════════════════════════════════════════════════════════╗${NC}"
+    echo -e "${RED}║                    🔥 IMPORTANT NEXT STEP 🔥                ║${NC}"
+    echo -e "${RED}╚══════════════════════════════════════════════════════════════╝${NC}"
+    echo -e "${YELLOW}⚠️  Download fingerprint browser and set as default!${NC}"
+    echo -e "${CYAN}📥 Download: https://sourceforge.net/projects/fingerprintjs.mirror/${NC}"
+    echo -e "${YELLOW}🔧 Use fingerprint browser for new Qoder signup to avoid detection!${NC}"
+    echo
     log "SUCCESS" "Operation completed successfully!"
     log "INFO" "You can now restart Qoder"
     echo

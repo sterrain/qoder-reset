@@ -224,6 +224,14 @@ Write-Host "You can now restart Qoder and it will recognize" -ForegroundColor Ye
 Write-Host "your device as new." -ForegroundColor Yellow
 Write-Host ""
 
+Write-Host "==================================================" -ForegroundColor Red
+Write-Host "           🔥 IMPORTANT NEXT STEP 🔥" -ForegroundColor Red
+Write-Host "==================================================" -ForegroundColor Red
+Write-Host "⚠️  Download fingerprint browser and set as default!" -ForegroundColor Yellow
+Write-Host "📥 Download: https://sourceforge.net/projects/fingerprintjs.mirror/" -ForegroundColor Cyan
+Write-Host "🔧 Use fingerprint browser for new Qoder signup to avoid detection!" -ForegroundColor Yellow
+Write-Host ""
+
 Write-Host "==================================================" -ForegroundColor Cyan
 Write-Host "           Qoder Reset Tool - Windows" -ForegroundColor Cyan
 Write-Host "==================================================" -ForegroundColor Cyan

@@ -89,6 +89,16 @@ The script will:
 4. Ask about preserving chat history
 5. Perform the selected reset process
 
+## 🔥 **CRITICAL NEXT STEP AFTER RESET**
+
+**⚠️ IMPORTANT:** After running the reset script, you MUST:
+
+1. **Download Fingerprint Browser**: [FingerprintJS Mirror on SourceForge](https://sourceforge.net/projects/fingerprintjs.mirror/)
+2. **Set as Default Browser**: Make it your primary browser
+3. **Use for Qoder Signup**: Only use the fingerprint browser for new Qoder registration
+
+**Why?** Even after resetting Qoder's device identity, your regular browser can still be fingerprinted and detected. Using a fingerprint browser ensures complete anonymity.
+
 ## 🔧 What Gets Reset
 
 The tool resets the following Qoder identity information:
