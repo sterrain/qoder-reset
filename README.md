@@ -2,6 +2,18 @@
 
 # Qoder Reset Tool
 
+## ⚠️ **IMPORTANT NOTICE** ⚠️
+
+> **✨ Use a fingerprint browser to register after resetting Qoder!**
+> 
+> **Why?** Duplicate registrations may still be recognized due to browser cache or fingerprinting, even after resetting Qoder's device identity.
+> 
+> **Solution:** Use a fingerprint browser like [FingerprintJS](https://sourceforge.net/projects/fingerprintjs.mirror/) to create completely new browser profiles with unique fingerprints.
+> 
+> **Download:** [FingerprintJS Mirror on SourceForge](https://sourceforge.net/projects/fingerprintjs.mirror/)
+
+---
+
 A powerful and compact shell script to completely reset and clean all Qoder application identity information from your system. Get Qoder from [https://qoder.com](https://qoder.com)
 
 ## 🚀 Features
