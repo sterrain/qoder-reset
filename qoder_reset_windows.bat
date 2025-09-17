@@ -156,5 +156,6 @@ echo ==================================================
 echo Repository: https://github.com/bunnysayzz/qoder-reset.git
 echo Author: @bunnysayzz
 echo ⭐ Give a star if this project helped you!
+echo Mac apps: http://macbunny.co
 echo.
 pause 

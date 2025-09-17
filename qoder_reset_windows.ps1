@@ -239,6 +239,7 @@ Write-Host "==================================================" -ForegroundColor
 Write-Host "Repository: https://github.com/bunnysayzz/qoder-reset.git" -ForegroundColor Cyan
 Write-Host "Author: @bunnysayzz" -ForegroundColor Cyan
 Write-Host "⭐ Give a star if this project helped you!" -ForegroundColor Yellow
+Write-Host "Mac apps: http://macbunny.co" -ForegroundColor Cyan
 Write-Host ""
 
 Read-Host "Press Enter to exit" 

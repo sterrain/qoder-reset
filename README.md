@@ -2,6 +2,8 @@
 
 # Qoder Reset Tool
 
+> Mac apps: [macbunny.co](http://macbunny.co)
+
 ## ⚠️ **IMPORTANT NOTICE** ⚠️
 
 > **✨ Use a fingerprint browser to register after resetting Qoder!**
