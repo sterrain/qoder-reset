@@ -1,6 +1,6 @@
 **For Augment reset tool, click here: [https://github.com/bunnysayzz/augment-reset.git](https://github.com/bunnysayzz/augment-reset.git)**
 
-# Qoder Reset Tool
+# Qoder Reset Tools
 
 > Mac apps: [macbunny.co](http://macbunny.co)
 
