@@ -58,6 +58,7 @@ print_banner() {
     echo "║                    Qoder Reset Tool                         ║"
     echo "║              Complete Identity Reset Solution               ║"
     echo "║                    Pure Bash Script                        ║"
+    echo "║                Mac apps, visit: http://macbunny.co          ║"
     echo "╚══════════════════════════════════════════════════════════════╝"
     echo -e "${NC}"
     echo
@@ -794,6 +795,7 @@ print_footer() {
     echo -e "${CYAN}╔══════════════════════════════════════════════════════════════╗${NC}"
     echo -e "${CYAN}║                    Qoder Reset Tool                         ║${NC}"
     echo -e "${CYAN}║              Complete Identity Reset Solution               ║"
+    echo -e "${CYAN}║                Mac apps, visit: http://macbunny.co          ║${NC}"
     echo -e "${CYAN}╚══════════════════════════════════════════════════════════════╝${NC}"
     echo -e "${CYAN}Repository: https://github.com/bunnysayzz/qoder-reset.git${NC}"
     echo -e "${CYAN}Author: @bunnysayzz${NC}"
